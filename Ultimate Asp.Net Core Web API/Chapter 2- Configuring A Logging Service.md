@@ -1,0 +1,1 @@
+- Nothing just configure logger service with four methods debug, info , warn, error with NLog package.

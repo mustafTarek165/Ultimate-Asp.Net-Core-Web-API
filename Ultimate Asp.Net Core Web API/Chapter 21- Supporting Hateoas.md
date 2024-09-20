@@ -1,0 +1,9 @@
+- HATEOAS (Hypermedia as the Engine of Application State) is a very important REST constraint. Without it, a REST API cannot be considered RESTful and many of the benefits we get by implementing a REST architecture are unavailable.
+- Why we need HATEOAS?
+- `API becomes self-discoverable and explorable.` 
+- `A client can use the links to implement its logic, it becomes much easier, and any changes that happen in the API structure are directly reflected onto the client.` 
+- `The server drives the application state and URL structure and not vice versa.` 
+- `The link relations can be used to point to the developer’s documentation.` 
+- `Versioning through hyperlinks becomes easier.` 
+- `Reduced invalid state transaction calls.` 
+- `API is evolvable without breaking all the clients.`

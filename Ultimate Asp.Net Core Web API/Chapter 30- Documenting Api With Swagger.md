@@ -1,0 +1,3 @@
+- API documentation is the process of giving instructions on how to effectively use and integrate an API.
+- Swagger is also referred to as OpenAPI. It allows us to understand the capabilities of a service without looking at the actual implementation code.
+- 

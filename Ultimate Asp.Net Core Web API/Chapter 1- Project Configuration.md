@@ -1,0 +1,22 @@
+- launchSettings.json: This configuration determines the launch behavior of the ASP.NET Core applications
+- launchUrl property: This property determines which URL will the application navigate to initially. For the launchUrl property to work, we need to set the launchBrowser property to true. So, for example, if we set the launchUrl property to weatherforecast, we will be redirected to https://localhost:5001/weatherforecast when we launch our application for HTTPS (localhost:5001).
+- Implicit using directives: mean the compiler automatically adds a different set of using directives based on a project type, so we don’t have to do that manually. These using directives are stored in the obj/Debug/net8.0 folder of our project and you can disable that behavior from ImplicitUsings tag from program file.
+- The WebApplicationBuilder: 
+     - Adding Configuration to the project by using the builder.Configuration property 
+    - Registering services in our app with the builder.Services property 
+    - Logging configuration with the builder.Logging property 
+    - Other IHostBuilder and IWebHostBuilder configuration
+ - CORS : ) is a mechanism to give or restrict access rights to applications from different domains.
+ - Extension methods: static methods defined in static class extending type in .Net and accepts this which is the data type of object we want to extend its behavior.
+ - Extension methods can extend IServiceCollection type to configure services apart from program.cs to keep it more cleaner and readable.
+ - app.UseStaticFiles(): enables using static files for requests.
+ - app.UseHsts(): will add middleware for using HSTS, which adds the Strict-Transport-Security header. HSTS tells browsers to only interact with the server over HTTPS for a specified period of time only even if user tried to use HTTP.
+ - app.MapControllers(): adds the endpoints from controller actions to the IEndpointRouteBuilder and the Run method that runs the application and block the calling thread until the host shutdown.
+ - app.Run(): is responsible for starting web server and hosting the app and since then app starts to listen for incoming HTTP request.
+ - build() method : it makes app with type webApplication which in turn contains multiple interfaces like IHost that we can use to start and stop the host, IApplicationBuilder that we use to build the middleware pipeline, and IEndpointRouteBuilder used to add endpoints in our app.
+ - middleware: piece of code integrated inside the application’s pipeline that we can use to handle requests and responses.
+ - we should register the exception handler in the early stage of the pipeline flow so it could catch all the exceptions that can happen in the later stages of the pipeline.
+ - once a response has been sent to the client, the HTTP response is considered **finalized** so if we tried to call next.Invoke() and modify headers there it will throw exception since headers were already sent to browser so it can't be modified.
+ - Why this behavior is not acceptable? because this leads to inconsistency where client doesn't know what is value of header the one was sent before or the modification after that from the server.
+ - The Map method is an extension method that accepts a path string as one of the parameters and used for branching middleware pipeline.
+ - The MapWhen method also for branching based on predicate

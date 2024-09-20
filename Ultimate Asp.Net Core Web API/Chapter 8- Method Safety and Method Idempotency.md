@@ -1,0 +1,10 @@
+- We can consider a method a safe one if it doesn’t change the resource representation. So, in other words, the resource shouldn’t be changed after our method is executed. Recognizing which methods are safe helps you understand which operations are read-only and have no side effects
+- If we can call a method multiple times with the same result, we can consider that method idempotent. So in other words, the side effects of calling it once are the same as calling it multiple times. Knowing which methods are idempotent helps ensure that operations on your server are predictable and consistent
+- Get, Options, Head are both safe and idempotent.
+- Post and Patch neither safe nor idempotent.
+- Delete and Put aren't safe but idempotent.
+- Why we need to understand Method Safety and Idempotency?
+    - Ensuring Consistency and Reliability.
+    - Error Handling and Resilience (Important)
+    - Performance.
+    - Concurrency Control.

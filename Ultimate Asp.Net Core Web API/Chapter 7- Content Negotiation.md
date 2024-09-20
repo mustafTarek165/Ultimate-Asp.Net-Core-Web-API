@@ -1,0 +1,3 @@
+-  content negotiation lets you choose or rather “negotiate” the content you want to get in a response to the REST API request.
+- Restricting Media Type: We added the ReturnHttpNotAcceptable = true option, which tells the server that if the client tries to negotiate for the media type the server doesn’t support, it should return the 406 Not Acceptable status code.
+- ASP.NET Core supports the creation of custom formatters. Their purpose is to give us the flexibility to create our formatter for any media types we need to support. This is useful if If we want our API to support content negotiation for a type that is not “in the box,” we need to have a mechanism to do this.

@@ -1,0 +1,10 @@
+- CQRS stands for “Command Query Responsibility Segregation”. As the acronym suggests, it’s all about splitting the responsibility of commands (saves) and queries (reads) into different models.
+- The benefits of CQRS are: 
+   1-Single Responsibility – Commands and Queries have only one job. It is either to change the state of the application or retrieve it. Therefore, they are very easy to reason about and understand. 
+    2- Decoupling – The Command or Query is completely decoupled from its handler, giving you a lot of flexibility on the handler side to implement it the best way you see fit. 
+    3- Scalability – The CQRS pattern is very flexible in terms of how you can organize your data storage, giving you options for great scalability. You can use one database for both Commands and Queries. You can use separate Read/Write databases, for improved performance, with messaging or replication between the databases for synchronization. 
+    4- Testability – It is very easy to test Command or Query handlers since they will be very simple by design, and perform only a single job. Of course, it can’t all be good. Here are some of the disadvantages of CQRS: 
+    5- Complexity – CQRS is an advanced design pattern, and it will take you time to fully understand it. It introduces a lot of complexity that 363 will create friction and potential problems in your project. Be sure to consider everything, before deciding to use it in your project. 
+    6- Learning Curve – Although it seems like a straightforward design pattern, there is still a learning curve with CQRS. Most developers are used to the procedural (imperative) style of writing code, and CQRS is a big shift away from that. 
+    7- Hard to Debug – Since Commands and Queries are decoupled from their handler, there isn’t a natural imperative flow of the application. This makes it harder to debug than traditional applications.
+- The Mediator pattern is simply defining an object that encapsulates how objects interact with each other. Instead of having two or more objects take a direct dependency on each other, they instead interact with a “mediator”

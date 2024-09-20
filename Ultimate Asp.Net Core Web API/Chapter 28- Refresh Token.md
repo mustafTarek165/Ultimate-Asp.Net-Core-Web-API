@@ -1,0 +1,4 @@
+- But sometimes we have a requirement not to force our users to log in every single time the token expires. For that, we can use a refresh token. Refresh tokens are credentials that can be used to acquire new access tokens. When an access token expires, we can use a refresh token to get a new access token from the authentication component.
+- So, why do we need both access tokens and refresh tokens? Why don’t we just set a long expiration date, like a month or a year for the access tokens?
+  1-The idea of refresh tokens is that we can make the access token shortlived so that, even if it is compromised, the attacker gets access only for a shorter period. With refresh token-based flow, the authentication server issues a one-time use refresh token along with the access token.
+ 

@@ -1,0 +1,2 @@
+- It is about Api sorting not sorting algorithms there is general approach help us to sort dynamically based on any passed arguments for any type of resource using Dynamic Linq library.
+- Dynamic Linq: used for generating queries at run time using strings as it converts them to expression trees required for usual linq queries.

@@ -1,0 +1,9 @@
+- Routing Types: Convention based routing, Attribute Routing.
+- Attribute routing: uses the attributes to map the routes directly to the action methods inside the controller (Recommended)
+- DTO : an object that we use to transport data between the client and server applications.
+-  Why we need DTO?
+     - Consistency, decoupling between server and client .
+     - Example: if we are sending database model User as it is to client and now added a new property LastLogin to track user at server and the client doesn't use it, now using database model directly sends LastLogin to client with the model User making serialization problem as it has no value initially but using DTO with only needed values for client now if we added LastLogin at database model Client isn't affected as we use DTO with needed ones only.
+- The best practice of creating DTOs is using records because of its immutability and value based equality which makes it suitable than classes. 
+- Why Records is suitable? it gives consistency for data in controller once it is assigned any try for modification would create new instance ensuring Safe writing in case of multiple threads as it is immutable.
+- AutoMapper: is a library that helps us with mapping objects in our applications. By using this library, we are going to remove the code for manual mapping — thus making the action readable and maintainable.

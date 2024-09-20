@@ -1,0 +1,9 @@
+ - Onion architecture is a form of layered architecture and we can visualize these layers as concentric circles.
+ - the following approach where we are going to split the architecture into 4 layers: 
+    - Domain Layer 
+    - Service Layer 
+    - Infrastructure Layer 
+    - Presentation Layer
+-  Presentation, Infrastructure=> Service=> Domain
+- Advantages: Easier testability because everything depends on abstractions. The abstractions can be easily mocked with a mocking library such as Moq.
+- We are following the Lazy Instantiation Pattern at creating Services and Repositories here.

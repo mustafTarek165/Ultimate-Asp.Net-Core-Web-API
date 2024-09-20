@@ -1,0 +1,2 @@
+- Just one thing to consider is that when we delete we get the entity at service to check if it is null or not then we pass it to delete from database why?
+    - this makes code more robust where there is no validations at controllers and repositories all validations in one place the service so we don't delete directly because then we have to check nullability at delete in repository that is why we get it to service then make validations then call delete function .

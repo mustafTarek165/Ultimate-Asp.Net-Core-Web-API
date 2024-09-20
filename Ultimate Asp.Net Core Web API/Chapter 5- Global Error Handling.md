@@ -1,0 +1,11 @@
+- The UseExceptionHandler middleware is a built-in middleware that we can use to handle exceptions.
+- In .NET 8, we can use this new interface to globally handle exceptions in our project. The IExceptionHandler interface has a single method member named TryHandleAsync.
+- IExceptionHandlerFeature : is a built-in interface in ASP.NET Core. It is used to provide details about an exception that was caught and handled by the **exception-handling middleware**.
+- To keep controller cleaner what we are going to do is to create custom exceptions that we can call from the service methods and interrupt the flow.
+- All checks in services don't include it at controllers.
+- How ExceptionHandler middleware detects exceptions through out the whole app?
+    - **Exception Bubbling**: When an exception is thrown, the runtime looks for the nearest `try-catch` block in the call stack. If no `try-catch` block is present, the exception moves up the stack.
+    - **Middleware Components**: Each middleware component in ASP.NET Core is responsible for handling the request and passing it to the next component. If an exception occurs in one of these components, it bubbles up the middleware stack.
+    - **Global Exception Handling Middleware**: If no middleware or code along the way catches the exception, it will eventually reach the **global exception handling middleware** (usually registered using `UseExceptionHandler()`).
+    that is why it is recommended to place Exception handler middleware as the first middleware at the app.
+ - Global Exception Handling middleware may be costly because each time exception occur at any middleware and wasn't handled by Try.. Catch the exception will bubble up until we reach Exception Handling middleware.

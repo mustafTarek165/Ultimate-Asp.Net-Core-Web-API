@@ -1,0 +1,1 @@
+- Filtering is a mechanism to retrieve results by providing some kind of criterion.

@@ -1,0 +1,3 @@
+- ModelState. It is a dictionary containing the state of the model and model binding validation.
+- In some cases, we want to repeat our validation. This can happen if, after the initial validation, we compute a value in our code, and assign it to the property of an already validated object If this is the case, and we want to run the validation again, we can use the ModelStateDictionary.ClearValidationState method to clear the validation specific to the model that we’ve already validated, and then use the TryValidateModel method.
+- we can create a custom attribute by using the ValidationAttribute class and it is reusable, or we can use the IValidatableObject interface but it is not reusable.
